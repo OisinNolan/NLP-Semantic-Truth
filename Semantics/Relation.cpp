@@ -184,6 +184,10 @@ bool most(Rel p, Rel q) {
   return false;
 }
 
+bool number(string gq, Rel p, Rel q) {
+  
+}
+
 Rel meet(Rel p, Rel q) {
   Rel out(p.arity);
   for(int i = 0; i < p.tuples.size(); i++) {
