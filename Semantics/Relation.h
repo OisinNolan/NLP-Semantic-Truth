@@ -34,6 +34,7 @@ bool true_of(Rel Pred, Thing o);
 bool gen_quant(string gq, Rel p, Rel q);
 bool some(Rel p, Rel q);
 bool every(Rel p, Rel q);
+bool most(Rel p, Rel q);
 
 
 Rel meet(Rel p, Rel q);

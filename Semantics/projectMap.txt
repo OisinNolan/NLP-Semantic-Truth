@@ -1,0 +1,39 @@
+ ~* Semantics project outline *~
+
+'eval'
+header:
+outlines the different relations, as well as the functions required to compute
+truth values for different elements of the syntax such as S, NP, VP etc.
+
+implementation:
+defines relations.
+implements functions defined in header:
+compute_s_value considers two cases: one in which the np is of form np --> name
+and another in which np is of form np --> det n. The name one is quite straight
+forward, simply querying whether or not the relation is true of the name.
+The det n one needs to consider generalised quantifiers and is thus more
+complicated.
+compute_tv_value only considers 'likes' because that is the only
+two-place relation specified so far.
+
+'Relation'
+class outline:
+Each relation has a vector of tuples which defines that relation.
+i.e the likes relation will contain a Vector<Tuple> which contains
+as elements n-ary vectors of strings.
+
+implementation:
+Seems to be where the interesting functions are.
+'reduce' considers only the tuples which hold for Thing val, and creates from
+them unary operations which can be assume to hold true for val.
+'erase' simply removes the element at index 'which' from a vector.
+'true_of' only considers unary relations, as is returns false for any
+predicates of arity > 1. It then loops through all tuples for the given
+relation, namely 'pred', and for each one compares it to the given Thing, o.
+If a relation to o is found, it returns true, otherwise, false.
+
+
+To do:
+Add more transitive verbs in the grammar, and then update 'compute_tv_value' in
+'eval.cpp' accordingly.
+

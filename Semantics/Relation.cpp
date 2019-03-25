@@ -130,6 +130,8 @@ bool gen_quant(string gq, Rel p, Rel q) {
   }
   else if (gq == "every") {
     return every(p,q);
+  } else if (gq == "most") {
+    return most(p,q);
   }
   else {
     // possible other cases where
@@ -164,8 +166,21 @@ bool every(Rel p, Rel q) {
   return check;
 }
 
-
-
+bool most(Rel p, Rel q) {
+  int half = p.tuples.size() / 2;
+  int contained = 0;
+  
+  for(int i=0; i < p.tuples.size(); i++) {
+    Tuple t = p.tuples[i];
+    if(q.has(t) == true) {
+      contained++;
+    }
+    if(contained > half) {
+      return true;
+    }
+  }
+  return false;
+}
 
 Rel meet(Rel p, Rel q) {
   Rel out(p.arity);

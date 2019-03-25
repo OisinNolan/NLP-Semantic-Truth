@@ -30,6 +30,7 @@ np --> det,n
 det --> [a]
 det --> [every]
 det --> [no]
+det --> [most]
 n --> [student]
 n --> [subject]
 n --> [lecturer]
