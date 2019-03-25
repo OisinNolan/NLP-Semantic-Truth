@@ -130,6 +130,8 @@ bool gen_quant(string gq, Rel p, Rel q) {
   }
   else if (gq == "every") {
     return every(p,q);
+  } else if(std::regex_match(gq, std::regex("\\d+"))){
+    return number(gq,p,q);
   } else if (gq == "most") {
     return most(p,q);
   }
