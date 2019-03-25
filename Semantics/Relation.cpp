@@ -188,12 +188,9 @@ bool most(Rel p, Rel q) {
 bool number(string gq, Rel p, Rel q) {
   int contained = 0;
   int num = std::stoi(gq);
-  cout << num << "\n";
     for(int i=0; i < p.tuples.size(); i++) {
       Tuple t = p.tuples[i];
       if(q.has(t) == true) {
-	cout << t[0];
-	cout << "boom";
 	contained++;
       }
     }
