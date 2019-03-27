@@ -13,3 +13,4 @@ Possible additions:
 - passive
 - adjectives, general ("Hermione is a female student") or noun-specific ("Hermione is a good runner")
 - infering reflexive/symmetric/transitive relations (in our database we know that Peter is married to Mary. We can infer that "Mary is married to Peter" is true as well.)
+- quantifying the object e.g. "Harry likes every subject"
