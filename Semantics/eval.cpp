@@ -111,6 +111,23 @@ Rel compute_vp_value(Tree *t) {
     r_unary = compute_n_value(t->dtrs[2]);
     return r_unary;
   }
+  else if(match(t,Rule("vp --> tv,np,np")) && match(->dtrs[1], Rule("np --> name") && match(->dtrs[2], Rule("np --> name"))){
+
+    Tree *tv = t->dtrs[0];
+    Rel r_trinary(3);
+    r_trinary = compute_tv_value(tv);
+
+    Tree *np = t->dtrs[1];
+    Thing o1;
+    o1 = compute_np_value(np);
+
+    Tree *np = t->dtrs[2];
+    Thing 2;
+    o2 = compute_np_value(np);
+
+    r_unary = reduce(reduce(r_trinary,1,o1),2,o2);
+    return r_unary;
+  }
   else {
     sem_error(t);
     return r_unary;

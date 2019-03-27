@@ -8,7 +8,9 @@
 s --> np,vp
 
 vp --> tv,np
+vp --> vp,np,np
 tv --> [likes]
+tv --> [owes]
 
 vp --> [is],[a],n
 
@@ -18,12 +20,23 @@ name --> [Plato]
 name --> [Hermione]
 name --> [Ron]
 name --> [Harry]
+name --> [Oisin]
+name --> [Benno]
 name --> [Kermit]
 name --> [OscarTheGrouch]
 name --> [maths]
 name --> [geometry]
 name --> [history]
+name --> [linguistics]
+name --> [economics]
 name --> [chocolate]
+name --> [beer]
+name --> [cake]
+name --> [apples]
+
+
+
+
 
 
 np --> det,n
@@ -44,6 +57,5 @@ det --> [9]
 n --> [student]
 n --> [subject]
 n --> [lecturer]
-n --> [unicorn]
 n --> n,[who],vp
 initial(s)
