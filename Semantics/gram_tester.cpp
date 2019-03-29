@@ -48,6 +48,7 @@ main(int argc, char *argv[]) {
   // this set up some global 'Rel' or relation objects
   // which evaluation functions will refer to
   likes = Rel(2,"likes_rel");
+  owes = Rel(3,"owes_rel");
   //likes.show();
 
   student = Rel(1,"student_rel");

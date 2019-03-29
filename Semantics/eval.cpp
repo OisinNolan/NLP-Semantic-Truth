@@ -8,6 +8,7 @@
 
 
 Rel likes;
+Rel owes;
 Rel student;
 Rel lecturer;
 Rel subject;
@@ -90,6 +91,17 @@ Rel compute_tv_value(Tree *t) {
   }
 }
 
+Rel compute_dtv_value(Tree *t) {
+  Rel r(3);
+  if(t->dtrs[0]->mother.cat == "owes") {
+    return owes;
+  }
+  else {
+    sem_error(t);
+    return r;
+  }
+}
+
 Rel compute_vp_value(Tree *t) {
   Rel r_unary(1);
 
@@ -112,21 +124,21 @@ Rel compute_vp_value(Tree *t) {
     return r_unary;
   }
   //checks if verb is ditransitive
-  else if(match(t,Rule("vp --> tv,np,np")) && match(->dtrs[1], Rule("np --> name") && match(->dtrs[2], Rule("np --> name"))){
+  else if(match(t,Rule("vp --> dtv,np,np")) && match(t->dtrs[1], Rule("np --> name")) && match(t->dtrs[2], Rule("np --> name"))){
 
-    Tree *tv = t->dtrs[0];
+    Tree *dtv = t->dtrs[0];
     Rel r_trinary(3);
-    r_trinary = compute_tv_value(tv);
+    r_trinary = compute_dtv_value(dtv);
 
-    Tree *np = t->dtrs[1];
+    Tree *np1 = t->dtrs[1];
     Thing o1;
-    o1 = compute_np_value(np);
+    o1 = compute_np_value(np1);
 
-    Tree *np = t->dtrs[2];
-    Thing 2;
-    o2 = compute_np_value(np);
+    Tree *np2 = t->dtrs[2];
+    Thing o2;
+    o2 = compute_np_value(np2);
 
-    r_unary = reduce(reduce(r_trinary,1,o1),2,o2);
+    r_unary = reduce(reduce(r_trinary,2,o2),1,o1);
     return r_unary;
   }
   else {

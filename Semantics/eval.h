@@ -3,6 +3,7 @@
 #include "trees.h"
 
 extern Rel likes;
+extern Rel owes;
 extern Rel student;
 extern Rel lecturer;
 extern Rel subject;

@@ -8,9 +8,9 @@
 s --> np,vp
 
 vp --> tv,np
-vp --> vp,np,np
+vp --> dtv,np,np
 tv --> [likes]
-tv --> [owes]
+dtv --> [owes]
 
 vp --> [is],[a],n
 
