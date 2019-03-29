@@ -111,6 +111,7 @@ Rel compute_vp_value(Tree *t) {
     r_unary = compute_n_value(t->dtrs[2]);
     return r_unary;
   }
+  //checks if verb is ditransitive
   else if(match(t,Rule("vp --> tv,np,np")) && match(->dtrs[1], Rule("np --> name") && match(->dtrs[2], Rule("np --> name"))){
 
     Tree *tv = t->dtrs[0];
