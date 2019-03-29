@@ -9,7 +9,7 @@ added to by myself and Benno Krojer (https://github.com/BennoKrojer).
 
 Possible additions:
 - numbers e.g. "5 students like maths." ...done
-- ditransitive verbs
+- ditransitive verbs... done
 - passive
 - adjectives, general ("Hermione is a female student") or noun-specific ("Hermione is a good runner")
 - infering reflexive/symmetric/transitive relations (in our database we know that Peter is married to Mary. We can infer that "Mary is married to Peter" is true as well.)
