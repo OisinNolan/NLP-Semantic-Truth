@@ -58,4 +58,12 @@ n --> [student]
 n --> [subject]
 n --> [lecturer]
 n --> n,[who],vp
+
+n --> ap,n
+
+ap --> [male]
+ap --> [female]
+ap --> [big]
+ap --> [green]
+
 initial(s)

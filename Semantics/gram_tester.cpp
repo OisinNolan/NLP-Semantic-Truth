@@ -60,6 +60,14 @@ main(int argc, char *argv[]) {
   subject = Rel(1,"subject_rel");
   //subject.show();
 
+   male = Rel(1,"male_rel");
+
+  female = Rel(1,"female_rel");
+
+  big = Rel(1,"big_rel");
+
+  green = Rel(1,"green_rel");
+
   unicorn = Rel(1);
 
   gname = string(argv[1]);

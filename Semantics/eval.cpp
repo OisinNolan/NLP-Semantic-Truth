@@ -13,6 +13,10 @@ Rel student;
 Rel lecturer;
 Rel subject;
 Rel unicorn;
+Rel male;
+Rel female;
+Rel big;
+Rel green;
 
 // these decs in eval.h
 // bool compute_s_value(Tree *t);
@@ -180,6 +184,22 @@ Rel compute_n_value(Tree *t) {
     q = compute_vp_value(t->dtrs[2]);
     r = meet(p,q);
     return r;
+  } else if(match(t,Rule("n --> ap,n"))) {
+      Rel p(1);
+      cout << t->dtrs[0]->dtrs[0]->mother.cat << "\n";
+      if(t->dtrs[0]->dtrs[0]->mother.cat == "male") {
+	p = compute_n_value(t->dtrs[1]);
+	return meet(p, male);
+      } else if(t->dtrs[0]->dtrs[0]->mother.cat == "female") {
+	p = compute_n_value(t->dtrs[1]);
+	return meet(p, female);
+      } else if(t->dtrs[0]->dtrs[0]->mother.cat == "big") {
+	p = compute_n_value(t->dtrs[1]);
+	return meet(p, big);
+      } else if(t->dtrs[0]->dtrs[0]->mother.cat == "green") {
+	p = compute_n_value(t->dtrs[1]);
+	return meet(p, green);
+      }
   }
   else {
     sem_error(t);
