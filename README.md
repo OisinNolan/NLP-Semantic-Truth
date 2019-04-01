@@ -13,7 +13,7 @@ added to by myself and Benno Krojer (https://github.com/BennoKrojer).
 those relations hold.
 
 ### Additions made to code
-- Number quantification, "5 students like maths", as well as the uantifier most: "Most students like maths"
+- Number quantification, "5 students like maths", as well as the quantifier most: "Most students like maths"
 - Ditransitive verbs, "Ron owes Hermione cake"
 - Adjectival relations, "Every green student likes maths"
 
