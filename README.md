@@ -13,7 +13,7 @@ added to by myself and Benno Krojer (https://github.com/BennoKrojer).
 those relations hold.
 
 ### Additions made to code
-- Number quantification, "5 students like maths"
+- Number quantification, "5 students like maths", as well as the uantifier most: "Most students like maths"
 - Ditransitive verbs, "Ron owes Hermione cake"
 - Adjectival relations, "Every green student likes maths"
 
@@ -22,3 +22,4 @@ those relations hold.
 - Passive constructions
 - Assigning different types of relations, (i.e reflexive, symmetric, transitive) allowing truth values of more sentences to be inferred based on certain relations.
 - Quantifying the object e.g. "Harry likes every subject"
+- noun-specific adjectives, e.g. "Every lazy student likes msths"
