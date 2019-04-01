@@ -88,10 +88,15 @@ main(int argc, char *argv[]) {
 
     //parser.use_dot = 1;
     if(parser.parse_all(words,0)) {   
-      cout << "yep\n";
-      int v; 
-      v = compute_s_value(parser.tree_ptr);
-      cout << "value is: " << v << endl;
+      cout << "Syntactic structure parsed\n";
+      int v;
+      try{
+	v = compute_s_value(parser.tree_ptr);
+	cout << "Truth value is: " << v << endl;
+      }
+      catch (const char* msg) {
+	cerr << msg << endl;
+      }
     }
     else {
       cout << "nope\n";

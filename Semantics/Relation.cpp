@@ -158,7 +158,9 @@ bool some(Rel p, Rel q) {
 
 bool every(Rel p, Rel q) {
   bool check = true;
-
+  if(p.tuples.size() == 0){
+    throw "Truth value undefined; the noun phrase set is empty.";
+  }
   for(int i = 0; i < p.tuples.size(); i++) {
     Tuple t = p.tuples[i];
     if(q.has(t) == false) {
