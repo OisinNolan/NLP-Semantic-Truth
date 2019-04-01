@@ -22,4 +22,4 @@ those relations hold.
 - Passive constructions
 - Assigning different types of relations, (i.e reflexive, symmetric, transitive) allowing truth values of more sentences to be inferred based on certain relations.
 - Quantifying the object e.g. "Harry likes every subject"
-- noun-specific adjectives, e.g. "Every lazy student likes msths"
+- noun-specific adjectives, e.g. "Every lazy student likes maths"
